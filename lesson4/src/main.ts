@@ -63,3 +63,25 @@ const total = (...nums: number[]): number => {
 };
 
 logMessage(total(1, 2, 3, 4, 5));
+
+// never type
+const createError = (errMsg: string): never => {
+  throw new Error(errMsg);
+};
+
+// custom type gaurd
+const isNumber = (value: any): boolean => {
+  return typeof value === 'number' ? true : false;
+};
+
+
+// use of never Type
+const numberOrString = (value: number | string): string => {
+  // type gaurds
+  if (typeof value === 'string') return 'string';
+  if (isNumber(value)) return 'number';
+  
+  return createError('this should never happen');
+  // it needs an ending return but empty return means undefined and its not equal to a string so we can
+  // use an error handler with the type of never
+};
