@@ -16,6 +16,7 @@ console.log(mohammad.getAge());
 // console.log(mohammad.age)
 // console.log(mohammad.lang)
 
+
 class WebDev extends Coder {
   constructor(
     public computer: string,
@@ -31,6 +32,7 @@ class WebDev extends Coder {
     return `i like ${this.lang}`;
   }
 }
+
 
 const mj = new WebDev('matebook13', 'mohammad', 'pop', 22);
 // console.log(mj.age);

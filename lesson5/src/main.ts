@@ -28,7 +28,6 @@ let nextVal: number = addOrConcat(2, 3, 'add') as number;
 10 as unknown as string;
 
 // the dom
-
 const img = document.querySelector('img') as HTMLImageElement;
 const myImg = document.getElementById('#img') as HTMLImageElement;
 const nextImg = <HTMLImageElement>document.getElementById('#img');
