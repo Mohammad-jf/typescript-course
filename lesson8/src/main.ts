@@ -39,3 +39,30 @@ const proccessUser = <T extends HasId>(user: T): T => {
   // proccess user with logic
   return user;
 };
+
+const getUsersProperty = <T extends HasId, K extends keyof T>(
+  users: T[],
+  key: K
+): T[K][] => {
+  return users.map((user) => user[key]);
+};
+
+class StateObj<T> {
+  private data: T;
+
+  constructor(value: T) {
+    this.data = value;
+  }
+
+  get state(): T {
+    return this.data;
+  }
+
+  set state(value: T) {
+    this.data = value;
+  }
+}
+
+const store = new StateObj('john');
+console.log(store.state)
+store.state = 'dave'
