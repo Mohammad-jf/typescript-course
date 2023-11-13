@@ -43,7 +43,11 @@ const guitarist1: Gutarist = {
 };
 
 const greetGuitarist = (guitarist: Gutarist) => {
-  return `Hello ${guitarist.name}!`;
+  if (guitarist.name) {
+    return `Hello ${guitarist.name}!`;
+  }
+
+  return 'Hello!';
 };
 
 // Enums
@@ -56,5 +60,3 @@ enum Grade {
 }
 
 console.log(Grade.U);
-
-
