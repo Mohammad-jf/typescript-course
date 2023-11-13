@@ -9,44 +9,52 @@ guitars.unshift('jim');
 let test = [];
 
 let bands: string[] = [];
+bands.push('macan band');
 
-bands.push('macan');
+let tuple: [string, number, boolean] = ['mohammad', 23, true]; //tuple
 
-// tuple
-let myTuple: [string, number, boolean] = ['dave', 123, true];
+let mixed = ['ali', 21, false]; //union type array
 
 // objects
-let myObject: object;
-myObject = [];
+let myObj: object;
+
+myObj = [];
+console.log(typeof myObj);
+
+myObj = bands;
+
+myObj = {};
 
 const exampleObj = {
-  name: 'mohammad',
-  age: 22,
-  isProgrammer: true,
+  prop1: 'mohammad',
+  prop2: true,
 };
 
-type Developers = {
+type Gutarist = {
   name: string;
-  active?: boolean;
-  age: number;
-  repos: (string | number)[];
+  active?: boolean; // optional
+  albums: (string | number)[];
 };
 
-let developers: Developers = {
+const guitarist1: Gutarist = {
   name: 'mohammad',
   active: true,
-  age: 22,
-  repos: ['gitHubApp,weather app'],
+  albums: ['goleGandom'],
 };
 
-// enum
+const greetGuitarist = (guitarist: Gutarist) => {
+  return `Hello ${guitarist.name}!`;
+};
 
-enum grade {
-  u,
-  d,
-  c,
-  b,
-  a,
+// Enums
+enum Grade {
+  U = 1,
+  D,
+  C,
+  B,
+  A,
 }
 
-console.log(grade.u);
+console.log(Grade.U);
+
+
