@@ -9,11 +9,15 @@ type Guitarist = {
   albums: stringOrnumberArray;
 };
 
+type userId = stringOrnumber;
+
 // literal types
 let myName: 'mohammad';
 
-let userName: 'mohammad ' | 'ali' | 'reza';
-userName = 'mohammad ';
+let userName: 'mohammad' | 'ali' | 'reza';
+userName = 'mohammad';
+
+
 
 // functions
 
@@ -40,8 +44,12 @@ let subtract: mathFunction = function (a, b) {
 
 logMessage(subtract(10, 6));
 
-// optional parameters
 
+
+
+
+
+// optional parameters
 const addAll = (a: number, b: number, c?: number): number => {
   if (typeof c !== 'undefined') {
     return a + b + c;
@@ -74,13 +82,12 @@ const isNumber = (value: any): boolean => {
   return typeof value === 'number' ? true : false;
 };
 
-
 // use of never Type
 const numberOrString = (value: number | string): string => {
   // type gaurds
   if (typeof value === 'string') return 'string';
   if (isNumber(value)) return 'number';
-  
+
   return createError('this should never happen');
   // it needs an ending return but empty return means undefined and its not equal to a string so we can
   // use an error handler with the type of never
