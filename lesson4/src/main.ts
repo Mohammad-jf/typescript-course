@@ -65,6 +65,8 @@ logMessage(addAll(10, 20, 40));
 // with default values
 logMessage(addAllDefault(10, 20));
 
+
+
 // rest parameters
 const total = (...nums: number[]): number => {
   return nums.reduce((prev, current) => prev + current, 0);
@@ -72,7 +74,9 @@ const total = (...nums: number[]): number => {
 
 logMessage(total(1, 2, 3, 4, 5));
 
-// never type
+
+// never type only for functions that are throwing errors
+
 const createError = (errMsg: string): never => {
   throw new Error(errMsg);
 };
