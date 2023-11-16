@@ -39,6 +39,7 @@ const mj = new WebDev('matebook13', 'mohammad', 'pop', 22);
 // console.log(mj.lang);
 console.log(mj.getLang());
 
+
 // implementing an interface to  a class
 interface Musician {
   name: string;
@@ -109,12 +110,12 @@ class Band {
   }
 }
 
-const mayBand = new Band();
+const myBand = new Band();
 
-mayBand.data = ['neil young', 'metalica'];
+myBand.data = ['neil young', 'metalica'];
 
-console.log(mayBand.data);
+console.log(myBand.data);
 
-mayBand.data = [...mayBand.data, 'zz top'];
+myBand.data = [...myBand.data, 'zz top'];
 
-console.log(mayBand.data)
+console.log(myBand.data)
