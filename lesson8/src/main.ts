@@ -5,10 +5,11 @@ const isObj = <T>(arg: T): boolean => {
 };
 
 const isTrue = <T>(arg: T): { arg: T; is: boolean } => {
+  // if it was an array but has no length
   if (Array.isArray(arg) && !arg.length) {
     return { arg, is: false };
   }
-
+  // if it was an object but it has no keys
   if (isObj(arg) && !Object.keys(arg as keyof T).length) {
     return { arg, is: false };
   }
