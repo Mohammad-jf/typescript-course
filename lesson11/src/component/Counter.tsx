@@ -1,4 +1,4 @@
-import { useState, ReactNode, useReducer, ChangeEvent } from 'react';
+import { ReactNode, useReducer, ChangeEvent } from 'react';
 
 const initialState = {
   count: 0,
@@ -55,7 +55,7 @@ const Counter = ({ children }: ChildrenType) => {
         decrement
       </button>
       <input type='text' onChange={handleTextInput} />
-      <h2>{state.text}</h2>
+      <h2>{state.text}</h2>3
     </>
   );
 };
