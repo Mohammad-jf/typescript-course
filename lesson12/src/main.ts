@@ -14,7 +14,7 @@ type Person = {
   skill?: string;
 };
 
-let person: object = {
+let person: Person = {
   name: 'mohammad',
   age: 22,
   skill: 'programmer',
@@ -58,3 +58,25 @@ interface ProgrammerWithId extends Programmer {
 
 // intersection is not usefull for primitive values because you cant have a number type as well as object at the same time
 
+// readonly
+
+let person3: Person = {
+  name: 'mohammad',
+  age: 22,
+  skill: 'programmer',
+};
+
+function getValue(key: keyof Person, person: Person) {
+  return person[key];
+}
+
+const age = getValue('age', person);
+
+type Musician = {
+  //   index signature
+  [index: string]: string;
+  instrument: string;
+};
+
+// tuples
+let myTupel: [string, number, boolean] = ['mohammad', 22, true];
