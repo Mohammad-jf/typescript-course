@@ -98,3 +98,4 @@ const arr: [string, number | boolean][] = [
   ['keyTwo', 2],
   ['keyThree', true],
 ];
+
